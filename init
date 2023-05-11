@@ -1,0 +1,4 @@
+fork_and_exec program1
+sleep 1
+wait
+exit
