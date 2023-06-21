@@ -137,7 +137,7 @@ fn fork_and_exec(name: String) {
             Some(running) => {
                 // 새로운 process 생성
                     // 새로 들어온 process를 읽고 한 줄씩 VecDeque에 저장
-                let process_dir: String = format!("{}{}", INPUT_DIR, name).to_string();
+                let process_dir: String = format!("{}\\{}", INPUT_DIR, name).to_string();
                 let mut lines: VecDeque<String> = VecDeque::new();
                 let file = File::open(process_dir).unwrap();
                 let reader = BufReader::new(file).lines();
@@ -420,7 +420,7 @@ fn main() {
         // cycle #0
             // init 생성 
             // int 프로그램 파일 읽고 한 줄씩 VecDeque에 저장
-        let process_dir: String = format!("{}{}", INPUT_DIR, "init").to_string();
+        let process_dir: String = format!("{}\\{}", INPUT_DIR, "init").to_string();
         let mut lines: VecDeque<String> = VecDeque::new();
         let file = File::open(process_dir).unwrap();
         let reader = BufReader::new(file).lines();
